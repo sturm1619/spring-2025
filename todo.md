@@ -234,12 +234,12 @@
 
 #### Thursday 19th
 
-[ ] CS3820 - Reading 13
+[x] CS3820 - Reading 13
 
 #### Friday 20th
 
 [ ] MATH2270 - Homework Report 
-[ ] CS2700 - Homework 9
+[x] CS2700 - Homework 9
 [x] CS3820 - Presentation
 [ ] CS3820 - Final Project Proposal
 
