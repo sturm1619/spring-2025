@@ -238,7 +238,7 @@
 
 #### Friday 20th
 
-[ ] MATH2270 - Homework Report 
+[x] MATH2270 - Homework Report 
 [x] CS2700 - Homework 9
 [x] CS3820 - Presentation
 [ ] CS3820 - Final Project Proposal
