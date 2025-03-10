@@ -25,55 +25,55 @@
 
 ## Jan 6th ~ Jan 12th
 
-#### Thursday
+### Thursday
 
 [x] CS3820 - Reading Survey 1/9
 
-#### Friday
+### Friday
 
 [x] CS2700 - Homework 1
 
-#### Sunday
+### Sunday
 
 [x] MATH2210 - Homework 1
 [x] MATH2210 - Module 1
 [x] EXSC1097 - Introduce Yourself
 
-#### Misc
+### Misc
 [x] MATH2270 - Section 1.1, (1, 5, 7, 15, 17)
 [x] MATH2270 - Section 1.2 (1, 3, 5, 7, 11, 19, 23, 27)
 [x] MATH2270 - Section 1.3 (1, 3, 5, 11, 13, 23, 29)
 
 ## Jan 13th - Jan 19th
 
-#### Tuesday 14
+### Tuesday 14
 
 [x] CS3820 - Homework 1
 
-#### Friday 16
+### Friday 16
 
 [x] CS2700 - Homework 2
 
-#### Sunday
+### Sunday
 
 [x] MATH2210 - Homework 2
 [x] MATH2210 - Discussion 2
 [x] EXSC1097 - Chapter 1
 
-#### Misc
+### Misc
 
 ## Jan 20 - Jan 26th
 
-#### Wednesday
+### Wednesday
 
 [x] MATH2270 - Report 2
 
-#### Friday 16
+### Friday 16
 
 [x] CS2700 - Homework 3
 [x] CS2700 - Quiz 1
 
-#### Sunday
+### Sunday
 
 [x] MATH2210 - Homework 3
 [x] MATH2210 - Discussion 3
@@ -81,27 +81,27 @@
 
 ## Jan 27th - Feb 2th
 
-#### Monday 27th
+### Monday 27th
 
 [x] MATH2270 - Exam 1
 
-#### Tuesday 28th
+### Tuesday 28th
 
 [x] CS3820 - Homework 3
 [x] CS3820 - Reading 6
 
-#### Wednesday
+### Wednesday
 
-#### Thursday
+### Thursday
 
 [x] CS3820 - Reading 6
 
-#### Friday 
+### Friday 
 
 [x] CS2700 - Homework 4
 [x] MATH2270 - Report 3
 
-#### Sunday
+### Sunday
 
 [x] MATH2210 - Homework 4
 [x] MATH2210 - Discussion 4
@@ -110,29 +110,29 @@
 
 ## Feb 3th - Feb 9th
 
-#### Monday 3th
+### Monday 3th
 
 [x] MATH2270 - Exam 1
 
-#### Tuesday 4th
+### Tuesday 4th
 
 [x] MATH2210 - Exam 1
 [x] CS3820 - Reading 7
 [/] CS3820 - Homework 4
 
-#### Wednesday
+### Wednesday
 
 [x] MATH2270 - Report 4
 
-#### Thursday
+### Thursday
 
 [x] CS3820 - Reading 8
 
-#### Friday 
+### Friday 
 
 [x] CS2700 - Homework 5
 
-#### Sunday
+### Sunday
 
 [x] MATH2210 - Homework 5
 [x] MATH2210 - Discussion 5
@@ -140,27 +140,27 @@
 
 ## Feb 10th - Feb 16th
 
-#### Monday 3th
+### Monday 3th
 
 [x] MATH2270 - Report 5
 
-#### Tuesday 4th
+### Tuesday 4th
 
 [x] CS3820 - Reading 8
 [x] CS3820 - Homework 5
 
-#### Wednesday
+### Wednesday
 
-#### Thursday
+### Thursday
 
 [x] CS3820 - Reading 9
 
-#### Friday 
+### Friday 
 
 [x] CS2700 - Homework 6
 [x] CS2700 - Quiz 2
 
-#### Sunday
+### Sunday
 
 [x] MATH2210 - Homework 6
 [x] MATH2210 - Discussion 6
@@ -168,26 +168,26 @@
 
 ## Feb 17th - Feb 23th
 
-#### Monday 17th
+### Monday 17th
 
 
-#### Tuesday 18th
+### Tuesday 18th
 
 [?] CS3820 - Reading 10
 [x] CS3820 - Homework 6
 
-#### Wednesday
+### Wednesday
 
-#### Thursday 19th
+### Thursday 19th
 
 [x] CS3820 - Reading 11
 
-#### Friday 20th
+### Friday 20th
 
 [x] MATH2270 - Report 6
 [x] CS2700 - Homework 7
 
-#### Sunday 21st
+### Sunday 21st
 
 [/] MATH2210 - Homework 7
 [x] MATH2210 - Discussion 7
@@ -195,25 +195,25 @@
 
 ## Feb 24th - Mar 2nd
 
-#### Monday 17th
+### Monday 17th
 
 
-#### Tuesday 18th
+### Tuesday 18th
 
 [x] CS3820 - Reading 11
 [x] CS3820 - Midterm
 
-#### Wednesday
+### Wednesday
 
-#### Thursday 19th
+### Thursday 19th
 
 [x] CS3820 - Reading 12
 
-#### Friday 20th
+### Friday 20th
 
 [x] CS2700 - Homework 7
 
-#### Sunday 21st
+### Sunday 21st
 
 [x] MATH2210 - Homework 7
 [x] MATH2210 - Discussion 7
@@ -221,30 +221,54 @@
 
 ## Mar 3rd - Mar 9th
 
-#### Monday 17th
+### Monday 17th
 
 [x] MATH2270 - Test 2
 
-#### Tuesday 18th
+### Tuesday 18th
 
 [x] MATH2210 - Test 2
 [x] CS3820 - Homework 8
 
-#### Wednesday
+### Wednesday
 
-#### Thursday 19th
+### Thursday 19th
 
 [x] CS3820 - Reading 13
 
-#### Friday 20th
+### Friday 20th
 
 [x] MATH2270 - Homework Report 
 [x] CS2700 - Homework 9
 [x] CS3820 - Presentation
-[ ] CS3820 - Final Project Proposal
+[x] CS3820 - Final Project Proposal
 
-#### Sunday 21st
+### Sunday 21st
 
-[ ] MATH2210 - Homework 9
-[ ] MATH2210 - Discussion 9
+[x] MATH2210 - Homework 9
+[x] MATH2210 - Discussion 9
+[x] EXSC1097 - Chapter 7
+
+## Mar 10th - Mar 17th
+
+### Spring break
+
+## Mar 18th - Mar 24th
+
+### Tuesday 19th
+
+[ ] CS3820 - Reading 14
+[ ] CS3820 - Homework 8
+
+### Friday 22th
+
+[ ] CS2700 - Homework 8
+[ ] CS2700 - Quiz 3
+
+### Sunday 24th
+
 [ ] EXSC1097 - Chapter 7
+[ ] MATH2210 - Discuss 10
+[ ] MATH2210 - Homework 10
+
+
