@@ -14,7 +14,8 @@ function coordinates = verify_and_solve(A, A_1, A_2, A_3, A_4)
     )
 
     if det(b_M) != 0
-        coordinates = reshape(b_M \ vectorize(A), [2,2]);
+        % coordinates = reshape(b_M \ vectorize(A), [2,2]);
+        coordinates = b_M \ vectorize(A);
       end
 end
 

@@ -204,13 +204,13 @@ function coordinates = verify_and_solve(A, A_1, A_2, A_3, A_4)
     )
 
     if det(basis) != 0
-        coordinates = reshape(basis \ vectorize(A), [2,2])
+        coordinates = basis \ vectorize(A), [2,2];
       end
 end
 
 answers = verify_and_solve(A, A_1, A_2, A_3, A_4)
 ```
-Answer is $mat(1,1;-1,-1)$.
+Answer is $(1,-1,1,-1)$.
 
 #line(length: 100%)
 
