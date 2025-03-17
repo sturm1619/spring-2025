@@ -34,8 +34,7 @@ triangle. But I couldn't conclude it be a trapezoidal prism. More over, I don't
 think I was ready to say trapezoidal prism._
 
 But once the body is given, the formula is clear. Note that, if we project
-this body into th $y z$ plane, we get a trapezoid. For such trapezoid, let
-$a$ and $b$ be the length of the sides that are parallel, and $h$ be the height
+this body into th $y z$ plane, we get a trapezoid. For such trapezoid, let $a$ and $b$ be the length of the sides that are parallel, and $h$ be the height
 or distance between those sides. Then $(a+b)/2 dot h$ is the area for this shape.
 We can get the magnitude of the volume of the original body by scaling by the
 depth $d$ of the original, yielding the formula $(a+b)/2 h d$.
@@ -500,7 +499,7 @@ $
   &= 8 / 3 (u - u^3 / 3)|_0^(1) \
   &= 8 / 3 (1 - 1 / 3) \
   &= 8 / 3 (2 / 3) \
-  &= 16 / 9 \
+  &= #rect()[$ 16 / 9 $] \
 $
 
 
