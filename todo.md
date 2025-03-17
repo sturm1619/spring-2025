@@ -238,7 +238,6 @@
 
 ### Friday 20th
 
-[x] MATH2270 - Homework Report 
 [x] CS2700 - Homework 9
 [x] CS3820 - Presentation
 [x] CS3820 - Final Project Proposal
@@ -255,6 +254,10 @@
 
 ## Mar 18th - Mar 24th
 
+### Monday 18th
+
+[x] MATH2270 - Homework Report 
+
 ### Tuesday 19th
 
 [ ] CS3820 - Reading 14
@@ -268,7 +271,7 @@
 ### Sunday 24th
 
 [ ] EXSC1097 - Chapter 7
-[ ] MATH2210 - Discuss 10
-[ ] MATH2210 - Homework 10
+[x] MATH2210 - Discuss 10
+[x] MATH2210 - Homework 10
 
 
