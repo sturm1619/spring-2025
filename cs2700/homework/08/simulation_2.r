@@ -1,3 +1,4 @@
+# NOTE: `compute_estimand` computes the estimand of the causal effect
 # sample: data.frame
 compute_estimand <- function(sample) {
     return(
@@ -6,6 +7,7 @@ compute_estimand <- function(sample) {
     )
 }
 
+# NOTE: `generate_observations` generates data to be tested.
 # sample_size: integer, effect_parametrization: function,
 # noise_deviation: numeric
 generate_observations <-
@@ -23,26 +25,27 @@ generate_observations <-
         return(observations)
     }
 
+# NOTE: `simulate_randomization_test` computes the estimand
 # sample_size: integer, randomization_sample_size: integer
 # effect_parametrization: vector|list, noise_deviation: double
 simulate_randomization_test <-
     function(sample_size, number_randomizations, effect_parametrization, title, noise_magnitude) {
-        # Generate sample
+        # NOTE: Generate sample
         data <-
             generate_observations(sample_size, effect_parametrization, noise_magnitude)
 
-        # Estimand
+        # NOTE: Estimand
         estimated_effect <-
             mean(data$outcome[data$treatment == "Active"]) - mean(data$outcome[data$treatment == "Control"])
 
-        # Plot sample data aggregates per treatment group
+        # NOTE: Plot sample data aggregates per treatment group
         boxplot(
             data$outcome ~ data$treatment,
             main="Comparison of Treatments", sub=title, xlab="Effectivenes", ylab="Treatment Group",
             col=c("green", "orange")
         ); grid()
 
-        # Generate Distributon of Randomizations
+        # NOTE: Generate Distributon of Randomizations
         randomizations <-
             numeric(number_randomizations)
 
@@ -52,7 +55,7 @@ simulate_randomization_test <-
                 mean(data$outcome[new_assignment == "Active"]) - mean(data$outcome[new_assignment == "Control"])
         }
 
-        # Plot Randomization Inference Results
+        # NOTE: Plot Randomization Inference Results
         d <- density(randomizations)
         plot(
             d, col="blue", xlim=c(-4,4),

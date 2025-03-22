@@ -18,6 +18,7 @@ plot_model <- function(file_plot, causal_graph, x, y, interest, model, step = 1)
     )]
 
     # Review model
+    message(causal_graph)
     linear_model <- lm(model)
     print(summary(linear_model))
 
