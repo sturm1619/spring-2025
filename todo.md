@@ -264,6 +264,7 @@
 [x] CS3820 - Homework 8
 
 ### Thursday 21st
+
 [x] CS3820 - Reading 15
 
 ### Friday 22th
@@ -273,22 +274,22 @@
 
 ### Sunday 24th
 
-[ ] EXSC1097 - Chapter 7
+[x] EXSC1097 - Chapter 7
 [x] MATH2210 - Discuss 10
 [x] MATH2210 - Homework 10
 
 ### Tuesday 26th
 
-[ ] CS3820 - Project Report 1
+[x] CS3820 - Project Report 1
 [x] CS3820 - Homework 9
 
 ### Friday 28th
 
-[ ] CS2700 - Homework 10
+[x] CS2700 - Homework 10
 
 ### Sunday 30th
 
-[ ] EXSC - Chapter 8
+[x] EXSC - Chapter 8
 [x] MATH2210 - Discuss 11
 [x] MATH2210 - Homework 11
 
@@ -298,8 +299,14 @@
 
 ### Tuesday 1st
 
-[ ] MATH2210 - Exam 3
+[x] MATH2210 - Report 8
 
 ### Friday 4th
 
 [ ] CS2700 - Homework 11
+
+### Sunday 6th
+
+[ ] EXSC - Chapter 9
+[ ] MATH2210 - Discuss 12
+[/] MATH2210 - Homework 12
