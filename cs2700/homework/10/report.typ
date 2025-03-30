@@ -1,0 +1,11 @@
+= Summary of Robins' Methods for Longitudinal Causal Inference
+
+== By Carlos Rubio
+
+Robins developed groundbreaking methods for causal inference in longitudinal studies where both exposures and confounders vary over time. His approach helps account for time-varying confounders (like employment status) are affected by past exposure in observational cohort studies, a scenario where models like Reuben's or Rosembaun's methods fail. The framework combines causal graphs with counterfactual reasoning to define proper estimands while addressing the healthy worker survivor effect and other biases.
+
+The core innovation is G-computation, which estimates potential outcomes under different exposure regimes by modeling the probability functions of time-varying covariates and outcomes. This method constructs counterfactual scenarios - like comparing survival if all workers were continuously exposed versus never exposed - while properly adjusting for confounders that evolve over time. The approach relies on the consistency assumption (linking observed data to counterfactuals) and SUTVA (no interference between units), similar to a randomized experiment but adapted for observational data.
+
+What makes Robins' method particularly powerful is its ability to handle complex longitudinal data structures where standard regression would fail. For example, in occupational cohort studies, employment status acts as both a confounder and an intermediate variable - affected by past arsenic exposure while influencing future exposure and mortality risk. The graphical approach helps identify these relationships, while G-computation provides a way to estimate causal effects by simulating interventions on the exposure process.
+
+These methods have transformed causal inference in epidemiology and beyond, providing rigorous tools for studies where treatments, behaviors, and covariates change over time. By properly accounting for time-dependent confounding and selection biases, Robins' framework allows researchers to draw more reliable causal conclusions from observational longitudinal data - whether studying workplace hazards, medical treatments, or social interventions. The key insight is that valid causal inference requires carefully modeling the entire temporal process rather than just static snapshots of exposure and outcome.
