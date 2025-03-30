@@ -86,11 +86,47 @@ adipose tissue and around muscles, which reduces cardiac diseases.
 = What to focus on
 
 We should focus more on fitness and metabolic capacity than weight loss. Also
-how much fat, and where it is located.
+how much fat, and where it is located. Good goals include checking
+blood pressure, WHR, dietary patterns and cholesterol levels.
 
-Intuitive eating is one of the best techniques! Focus on satiety and hunger
-cues. Increased food weight helps with releasins leptin.
+Caloric restriction alone is more effective than exercise alone. Focus on
+lossing 5-10% of total weight over 6 months, 0.5-2 lbs per week. This requires
+250-1000 negative calories per day. Vigorous exerise increases RMR and helps
+burn extra calories. Resistance training helps mantaining muscle mass and holds
+RMR.
 
-Reduce portion sizes. Also, reduced added sugars, refined carbs, processed foods
+Intuitive eating is one of the best techniques for improving diet. Focus on
+satiety and hunger cues. Increased food weight helps with releasins leptin.
+Processed food make people eat 500 calories more, eat faster and increases
+appetite (ghrenlin). Skipping breakfast increases likelyhood of consuming excess
+calories. Planning meals and snacks helps.
+
+Reduce portion sizes. Also, reduce added sugars, refined carbs, processed foods
 and solid fats. Adding fruits and vegetables and avoiding fried snacks helps.
+Multigrain bread are less processed and have higher fiber content. It reduces
+energy availability. Raw whole nuts *overestimate* the number of calories
+metabolized (around 20%). Good replacement for a snack. Others include canned
+diet drinks, powders for shakes and diet food bars.
 
+Some recommended diets are Mediterranean, DASH and a flexible semi-vegetarian.
+Keto doesn't work because increases LDL, lack of fiber and micronutrients,
+stress on kidney and liver, and changes microbiome.
+
+What to do if portion sizes are big and weight small? Eat somewhere else!
+
+Intermittent fasting extends nighttime fating period and syncs circadin rhythm.
+Outcome reduces blood pressure, inflamation, cancer risk, aging and diabetes
+risk.
+
+= When gaining is necessary
+
+Women are 4 time more likely to need to gain weight to be at peak health.
+
+- Consuming more protein, healthy fats and complex carbs from whole grains,
+  fruits and vegetables.
+
+- Eat more frequent smaller meals.
+
+- Add nutrient-energy dense foods as nuts and avocados. Smoothies are good.
+
+60-65% of daily calories must come from carbs.
