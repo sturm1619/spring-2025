@@ -1,0 +1,1236 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0114.1153                               -->
+<workbook original-version='18.1' source-build='2024.3.3 (20243.25.0114.1153)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <Extensions />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <_.fcp.VizExtensions.true...VizExtensions />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='survey-data-tableau1' inline='true' name='federated.1gj92e61y7gxxd13fb8ig0had01x' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='survey-data-tableau1' name='textscan.1r7s0811dph2zt15ysq891819ee5'>
+            <connection class='textscan' directory='C:/Users/10502190/Desktop/cs 3820 data visualization/Lectures/13 Part to Whole 1' filename='survey-data-tableau1.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='survey-data-tableau2' name='textscan.1grx4ts1yvjjrz1b9c4hm1thoe97'>
+            <connection class='textscan' directory='C:/Users/10502190/Desktop/cs 3820 data visualization/Lectures/13 Part to Whole 1' filename='survey-data-tableau2.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1r7s0811dph2zt15ysq891819ee5' name='survey-data-tableau1.csv' table='[survey-data-tableau1#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Category' ordinal='0' />
+              <column datatype='real' name='Value' ordinal='1' />
+              <column datatype='string' name='F3' ordinal='2' />
+              <column datatype='string' name='F4' ordinal='3' />
+              <column datatype='string' name='F5' ordinal='4' />
+              <column datatype='string' name='F6' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1grx4ts1yvjjrz1b9c4hm1thoe97' name='survey-data-tableau2.csv' table='[survey-data-tableau2#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Category' ordinal='0' />
+              <column datatype='real' name='Republicans' ordinal='1' />
+              <column datatype='real' name='Independents' ordinal='2' />
+              <column datatype='real' name='Democrats' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Category (survey-data-tableau2.csv)]' value='[survey-data-tableau2.csv].[Category]' />
+          <map key='[Category]' value='[survey-data-tableau1.csv].[Category]' />
+          <map key='[Democrats]' value='[survey-data-tableau2.csv].[Democrats]' />
+          <map key='[F3]' value='[survey-data-tableau1.csv].[F3]' />
+          <map key='[F4]' value='[survey-data-tableau1.csv].[F4]' />
+          <map key='[F5]' value='[survey-data-tableau1.csv].[F5]' />
+          <map key='[F6]' value='[survey-data-tableau1.csv].[F6]' />
+          <map key='[Independents]' value='[survey-data-tableau2.csv].[Independents]' />
+          <map key='[Republicans]' value='[survey-data-tableau2.csv].[Republicans]' />
+          <map key='[Value]' value='[survey-data-tableau1.csv].[Value]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[survey-data-tableau1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[survey-data-tableau2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[survey-data-tableau1.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Value]</local-name>
+            <parent-name>[survey-data-tableau1.csv]</parent-name>
+            <remote-alias>Value</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F3]</local-name>
+            <parent-name>[survey-data-tableau1.csv]</parent-name>
+            <remote-alias>F3</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F4]</local-name>
+            <parent-name>[survey-data-tableau1.csv]</parent-name>
+            <remote-alias>F4</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F5]</local-name>
+            <parent-name>[survey-data-tableau1.csv]</parent-name>
+            <remote-alias>F5</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F6</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F6]</local-name>
+            <parent-name>[survey-data-tableau1.csv]</parent-name>
+            <remote-alias>F6</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category (survey-data-tableau2.csv)]</local-name>
+            <parent-name>[survey-data-tableau2.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Republicans</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Republicans]</local-name>
+            <parent-name>[survey-data-tableau2.csv]</parent-name>
+            <remote-alias>Republicans</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Independents</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Independents]</local-name>
+            <parent-name>[survey-data-tableau2.csv]</parent-name>
+            <remote-alias>Independents</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Democrats</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Democrats]</local-name>
+            <parent-name>[survey-data-tableau2.csv]</parent-name>
+            <remote-alias>Democrats</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Category (survey-data-tableau2.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+      <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+      <column caption='survey-data-tableau1.csv' datatype='table' name='[__tableau_internal_object_id__].[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]' role='measure' type='quantitative' />
+      <column caption='survey-data-tableau2.csv' datatype='table' name='[__tableau_internal_object_id__].[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]' role='measure' type='quantitative' />
+      <column-instance column='[Category (survey-data-tableau2.csv)]' derivation='None' name='[none:Category (survey-data-tableau2.csv):nk]' pivot='key' type='nominal' />
+      <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Value]' derivation='Sum' name='[sum:Value:ok]' pivot='key' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/10502190/AppData/Local/Temp/TableauTemp/#TableauTemp_0ry2tm30t2enfr19ufi6u0rdwae3.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/27/2025 05:18:31 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376' table='[Extract].[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]' type='table' />
+            <relation name='survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5' table='[Extract].[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Category (survey-data-tableau2.csv)]' value='[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5].[Category]' />
+            <map key='[Category]' value='[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376].[Category]' />
+            <map key='[Democrats]' value='[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5].[Democrats]' />
+            <map key='[F3]' value='[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376].[F3]' />
+            <map key='[F4]' value='[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376].[F4]' />
+            <map key='[F5]' value='[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376].[F5]' />
+            <map key='[F6]' value='[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376].[F6]' />
+            <map key='[Independents]' value='[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5].[Independents]' />
+            <map key='[Republicans]' value='[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5].[Republicans]' />
+            <map key='[Value]' value='[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376].[Value]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>0</ordinal>
+              <family>survey-data-tableau1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Value]</local-name>
+              <parent-name>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</parent-name>
+              <remote-alias>Value</remote-alias>
+              <ordinal>1</ordinal>
+              <family>survey-data-tableau1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F3]</local-name>
+              <parent-name>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</parent-name>
+              <remote-alias>F3</remote-alias>
+              <ordinal>2</ordinal>
+              <family>survey-data-tableau1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F4</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F4]</local-name>
+              <parent-name>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</parent-name>
+              <remote-alias>F4</remote-alias>
+              <ordinal>3</ordinal>
+              <family>survey-data-tableau1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F5</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F5]</local-name>
+              <parent-name>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</parent-name>
+              <remote-alias>F5</remote-alias>
+              <ordinal>4</ordinal>
+              <family>survey-data-tableau1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>F6</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F6]</local-name>
+              <parent-name>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</parent-name>
+              <remote-alias>F6</remote-alias>
+              <ordinal>5</ordinal>
+              <family>survey-data-tableau1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category (survey-data-tableau2.csv)]</local-name>
+              <parent-name>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>6</ordinal>
+              <family>survey-data-tableau2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Republicans</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Republicans]</local-name>
+              <parent-name>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</parent-name>
+              <remote-alias>Republicans</remote-alias>
+              <ordinal>7</ordinal>
+              <family>survey-data-tableau2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Independents</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Independents]</local-name>
+              <parent-name>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</parent-name>
+              <remote-alias>Independents</remote-alias>
+              <ordinal>8</ordinal>
+              <family>survey-data-tableau2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Democrats</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Democrats]</local-name>
+              <parent-name>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</parent-name>
+              <remote-alias>Democrats</remote-alias>
+              <ordinal>9</ordinal>
+              <family>survey-data-tableau2.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[sum:Value:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>1.0</bucket>
+            </map>
+            <map to='#9f29ff'>
+              <bucket>0.054000000000000006</bucket>
+            </map>
+            <map to='#c57fff'>
+              <bucket>0.076299999999999993</bucket>
+            </map>
+            <map to='#ccd1db'>
+              <bucket>0.1313</bucket>
+            </map>
+            <map to='#ff412c'>
+              <bucket>0.52810000000000001</bucket>
+            </map>
+            <map to='#ff8d80'>
+              <bucket>0.21030000000000001</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Category:nk]' type='palette'>
+            <map to='#9f29ff'>
+              <bucket>&quot;Not at all serious&quot;</bucket>
+            </map>
+            <map to='#c57fff'>
+              <bucket>&quot;Not very serious&quot;</bucket>
+            </map>
+            <map to='#ccd1db'>
+              <bucket>&quot;Not sure&quot;</bucket>
+            </map>
+            <map to='#ff412c'>
+              <bucket>&quot;Very serious&quot;</bucket>
+            </map>
+            <map to='#ff8d80'>
+              <bucket>&quot;Somewhat serious&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Category (survey-data-tableau2.csv):nk]' type='palette'>
+            <map to='#9f29ff'>
+              <bucket>&quot;Not at all serious&quot;</bucket>
+            </map>
+            <map to='#c57fff'>
+              <bucket>&quot;Not very serious&quot;</bucket>
+            </map>
+            <map to='#ccd1db'>
+              <bucket>&quot;Not sure&quot;</bucket>
+            </map>
+            <map to='#ff412c'>
+              <bucket>&quot;Very serious&quot;</bucket>
+            </map>
+            <map to='#ff8d80'>
+              <bucket>&quot;Somewhat serious&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='survey-data-tableau1.csv' id='survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376'>
+            <properties context=''>
+              <relation connection='textscan.1r7s0811dph2zt15ysq891819ee5' name='survey-data-tableau1.csv' table='[survey-data-tableau1#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Category' ordinal='0' />
+                  <column datatype='real' name='Value' ordinal='1' />
+                  <column datatype='string' name='F3' ordinal='2' />
+                  <column datatype='string' name='F4' ordinal='3' />
+                  <column datatype='string' name='F5' ordinal='4' />
+                  <column datatype='string' name='F6' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376' table='[Extract].[survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376]' type='table' />
+            </properties>
+          </object>
+          <object caption='survey-data-tableau2.csv' id='survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5'>
+            <properties context=''>
+              <relation connection='textscan.1grx4ts1yvjjrz1b9c4hm1thoe97' name='survey-data-tableau2.csv' table='[survey-data-tableau2#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Category' ordinal='0' />
+                  <column datatype='real' name='Republicans' ordinal='1' />
+                  <column datatype='real' name='Independents' ordinal='2' />
+                  <column datatype='real' name='Democrats' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5' table='[Extract].[survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Category]' />
+              <expression op='[Category (survey-data-tableau2.csv)]' />
+            </expression>
+            <first-end-point object-id='survey-data-tableau1.csv_979C6AAE08F0461D8ED634BE11CE0376' />
+            <second-end-point object-id='survey-data-tableau2.csv_632ACFD1175248F5BD9303952CA87DB5' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='survey-data-tableau1' name='federated.1gj92e61y7gxxd13fb8ig0had01x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gj92e61y7gxxd13fb8ig0had01x'>
+            <column caption='100 * SUM([Value])' datatype='real' name='[Calculation_1838594609479110656]' role='measure' type='quantitative' user:unnamed='Sheet 1'>
+              <calculation class='tableau' formula='100 * SUM([Value])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1838594609479110656]' derivation='User' name='[usr:Calculation_1838594609479110656:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Very serious&quot;</bucket>
+              <bucket>&quot;Somewhat serious&quot;</bucket>
+              <bucket>&quot;Not sure&quot;</bucket>
+              <bucket>&quot;Not very serious&quot;</bucket>
+              <bucket>&quot;Not at all serious&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Value:qk]' />
+              <color column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]' />
+              <tooltip column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[usr:Calculation_1838594609479110656:qk]' />
+              <text column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Category:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Value:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1gj92e61y7gxxd13fb8ig0had01x].[usr:Calculation_1838594609479110656:qk]>%]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5E97A576-EF30-4D57-8E76-CCE4399B22C2}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='survey-data-tableau1' name='federated.1gj92e61y7gxxd13fb8ig0had01x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gj92e61y7gxxd13fb8ig0had01x'>
+            <column caption='100 *SUM([Value])' datatype='real' name='[Calculation_1838594609491136513]' role='measure' type='quantitative' user:unnamed='Sheet 2'>
+              <calculation class='tableau' formula='100 *SUM([Value])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1838594609491136513]' derivation='User' name='[usr:Calculation_1838594609491136513:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]'>
+            <groupfilter function='level-members' level='[none:Category:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.ladataviz.extension.voronoi' extension-url='https://extensions.ladataviz.com/voronoi?licenseKey=free' extension-version='1.0.0' instance-id='E9279B00C98D41328666F442A2BF0BCC'>
+              <instance-settings />
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]' />
+              <_.fcp.VizExtensions.true...custom column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]' custom-type-name='color' />
+              <_.fcp.VizExtensions.false...lod column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Value:qk]' />
+              <_.fcp.VizExtensions.true...custom column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Value:qk]' custom-type-name='size' />
+              <tooltip column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[usr:Calculation_1838594609491136513:qk]' />
+              <lod column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Category:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Value:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1gj92e61y7gxxd13fb8ig0had01x].[usr:Calculation_1838594609491136513:qk]>%]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C23D51B4-C7B3-42A7-AC8E-00F9E0B71566}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='survey-data-tableau1' name='federated.1gj92e61y7gxxd13fb8ig0had01x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gj92e61y7gxxd13fb8ig0had01x'>
+            <column datatype='string' name='[Category (survey-data-tableau2.csv)]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Democrats]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Independents]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Republicans]' role='measure' type='quantitative' />
+            <column-instance column='[Category (survey-data-tableau2.csv)]' derivation='None' name='[none:Category (survey-data-tableau2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Democrats]' derivation='Sum' name='[sum:Democrats:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Independents]' derivation='Sum' name='[sum:Independents:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Republicans]' derivation='Sum' name='[sum:Republicans:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Democrats:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Independents:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Republicans:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Very serious&quot;</bucket>
+              <bucket>&quot;Somewhat serious&quot;</bucket>
+              <bucket>&quot;Not sure&quot;</bucket>
+              <bucket>&quot;Not very serious&quot;</bucket>
+              <bucket>&quot;Not at all serious&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1gj92e61y7gxxd13fb8ig0had01x].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[Multiple Values]' />
+              <color column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]' />
+              <text column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5D451100-E7C1-451E-B389-D451BA8158F7}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='survey-data-tableau1' name='federated.1gj92e61y7gxxd13fb8ig0had01x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gj92e61y7gxxd13fb8ig0had01x'>
+            <column datatype='string' name='[Category (survey-data-tableau2.csv)]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Democrats]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Independents]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Republicans]' role='measure' type='quantitative' />
+            <column-instance column='[Category (survey-data-tableau2.csv)]' derivation='None' name='[none:Category (survey-data-tableau2.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Democrats]' derivation='Sum' name='[sum:Democrats:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Independents]' derivation='Sum' name='[sum:Independents:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Republicans]' derivation='Sum' name='[sum:Republicans:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Democrats:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Independents:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1gj92e61y7gxxd13fb8ig0had01x].[sum:Republicans:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1gj92e61y7gxxd13fb8ig0had01x].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <_.fcp.VizExtensions.false...mark class='Automatic' />
+            <_.fcp.VizExtensions.true...mark class='VizExtension' />
+            <_.fcp.VizExtensions.true...add-in add-in-id='com.ladataviz.extension.voronoi' extension-url='https://extensions.ladataviz.com/voronoi?licenseKey=free' extension-version='1.0.0' instance-id='4B51DFEDCE864929845DC5964E96159B'>
+              <instance-settings />
+              <type-settings>
+                <worksheet />
+              </type-settings>
+            </_.fcp.VizExtensions.true...add-in>
+            <encodings>
+              <_.fcp.VizExtensions.false...lod column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[Multiple Values]' />
+              <_.fcp.VizExtensions.true...custom column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[Multiple Values]' custom-type-name='size' />
+              <_.fcp.VizExtensions.false...lod column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]' />
+              <_.fcp.VizExtensions.true...custom column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]' custom-type-name='color' />
+              <lod column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]' />
+              <lod column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[Multiple Values]' />
+              <lod column='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Category :&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'><![CDATA[<[federated.1gj92e61y7gxxd13fb8ig0had01x].[:Measure Names]>:	]]></run>
+                <run bold='true'><![CDATA[<[federated.1gj92e61y7gxxd13fb8ig0had01x].[Multiple Values]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3F38B428-5224-48D1-BFDE-71A3D7A81A25}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='12' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98140' id='11' param='vert' type-v2='layout-flow' w='97538' x='1231' y='930' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{ACA6A2FF-7314-4658-8A0D-9A0D3C91D53F}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight field='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]'>
+          <bucket-selection />
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3F02E94F-82C9-4DF5-AB8F-AB48570F8484}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]</field>
+            <field>[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7CD0474D-D2E5-4A35-88FF-27571D02E786}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]</field>
+            <field>[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C5D22276-C885-4C17-B5B2-0F0EA444EDF2}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1gj92e61y7gxxd13fb8ig0had01x].[none:Category (survey-data-tableau2.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{71FF9845-D6BE-4646-89DB-4856E68AB1A1}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{1CF55960-8D48-4775-9205-9078CDC013CD}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACF0lEQVR4nO3TMQEAIAzAMIZ/z0MGRxMFfTq7uweCZmbu7wj4yQCkGYA0A5BmANIMQJoB
+      SDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0
+      A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMA
+      aQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5Bm
+      ANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYg
+      zQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIM
+      QJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCk
+      GYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoB
+      SDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0
+      A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSDMAaQYgzQCkGYA0A5BmANIMQJoBSHtb
+      egWA0FAUAAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      hp2TGe4/GGdw3q4Vk58AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAGqElEQVR4nO3Z2W4b5wGG4W+Gu0hxE0WZ1mKrtpzETRE4KFr0EgK0d9AL6KX0vDdR9BZy
+      0gU9aIsYbRwZrq24XmQpEUVLFEVRHHJmeiBVtVP1wAggKfne52jm12wi+GL+GQZpmqYCTIWX
+      fQHAZSIAWMu+ufKb3/1B6//avqxrAXStWdWtn67paDK9kPO9FcD60239+fOnF3Ji4Dw3O00l
+      a20NosmFnI8pEKydG8Cd5XmF+ZJuLVTe+YD1SvFbXxQgJdp+8Jm2Hm+8wz6pDra33ho53n+t
+      aZz83z2y5w3OlEt6bzmvaBTpl598oBfbe5orh9reO9bXg7EOe7tae39NyeG+Co2WVhtZPXk1
+      UL9/oOJMQeVKWflkot2jicaSKkFOtcJUn/79xTv8M3AXR5Hys3l9tX5fo8OR8qVZjQ93FIdl
+      Vecb+vqLB6pcX1K5Vtf+zr4a1+Z0tLOl7ouXal2r68n9h2q1ZxXO3dTy7Y7WP/29Vu59pGd/
+      +4tmV24r2ds9/w7w5c5QHy9VNExDdbt72uqP9GhjUw82+7q3UlP3KNarnT0tLjSUD6X1Zzs6
+      Ho30xYuecpmMgjRRGgQqFYu61Wmou7uvRrOu3EV/gvgOSzUzt6DBq5eaxInyhZwS5dS+var6
+      jdtKo6FytbYaS6vqP/tSs62K0jCv8vyiaq26Dno9lQp5lVodFSsVKcip3pnT/uYLFWrzqrVb
+      qi6uKnjzh7Bf/fq3Zw/BxXxWx9FU1UpJx8eR4iRWvdHUQinRw819FfJ55cJU4zjVTC6j4Xii
+      aZwolwmVyWYVprGmClXKhToax5opZNQfji/t48R3w81OU/d+8WMNokjRcCCFeWWzgaJoqnyh
+      IAXSycw91WR0qEy+rDSdKpMJlQZZBenJdCeJJ5pOEhVmihofjVQolzUe9JUrVzUdHSqTLykM
+      g/OnQJJ0HJ28hjo4HJ2N9Xqv1TtdHkeR/vN17r/xymoSJ5rE0elarOh0sT+9mNda+L4IlC9X
+      z9aKucL/bFGo1E6X3vwan0xqwmxW2dNdipWTZ9litS5JylSq39gaMEUAsEYAsEYAsEYAsEYA
+      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
+      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
+      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
+      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
+      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
+      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
+      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsJa97AsAvunj6w0d
+      T+MLORcB4MopFROF8cUEwBQI1ggAV1Z3+yulcaThcHQ2lqbptztoMtGgPzxbZQqEK+vZ559p
+      +v4PdXA0VTLoqbqwqH/86Y/6ySc/Vzo+VKM+o97uSN2tl1q+taxXmwdqLlSVDwPVFha0uf5A
+      4WxLwWhPk0xFpWCsJFdUrlDW9uOHKrWXuAPg6mour+r186c67G5rtrOm/u6ulu/eVWuuqkw0
+      0P2//lPbL58qTmLtPd9QcWFZR92udnZ2FUpKUyk6PtLGg3Ud7O3rde9Anc6sth49VGb+hoa7
+      W9wBcHU1WvPK1md0kJQ02Hqi+vVVxYOueq8P1Fz+gRqHG1panNPjR89VW1xStjGjUqWh9Y2p
+      giBQmAmUZnK6cWdNSbGmZr2sIFNU57272tt8qnJ7kQBwdTXb85LmVZWkpYXT0fbZ39c+/ECS
+      9NHP/jvW7Qb68N5NSdLK3R+djt5467jtTkntzpwkngHwPTO/vPRO2/MMAGsEAGsEAGsEAGsE
+      AGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsE
+      AGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsE
+      AGsEAGsEAGvZN1furLQVTaaXdS2ArrWqahZKipL4Qs73b+6HoHD7bTb3AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      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
+      TkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 4' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+  <_.fcp.VizExtensions.true...referenced-extensions>
+    <_.fcp.VizExtensions.true...referenced-extension>
+      <manifest manifest-version='0.1'>
+        <worksheet-extension extension-version='1.0.0' id='com.ladataviz.extension.voronoi'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>Voronoi Treemap</description>
+          <author email='tristan@ladataviz.com' name='Jessica Bautista / Tristan Guillevin' organization='LaDataViz' website='https://www.ladataviz.com' />
+          <min-api-version>1.11</min-api-version>
+          <source-location>
+            <url>https://extensions.ladataviz.com/voronoi?licenseKey=free</url>
+          </source-location>
+          <icon />
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+          <encoding id='size'>
+            <display-name>Size</display-name>
+            <role-spec>
+              <role-type>continuous-dimension</role-type>
+              <role-type>continuous-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='size' />
+          </encoding>
+          <encoding id='color'>
+            <display-name>Color</display-name>
+            <role-spec>
+              <role-type>continuous-dimension</role-type>
+              <role-type>continuous-measure</role-type>
+              <role-type>discrete-dimension</role-type>
+              <role-type>discrete-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='color' />
+          </encoding>
+        </worksheet-extension>
+        <resources>
+          <resource id='name'>
+            <text locale='en_US'>Voronoi Treemap</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='Sheet 2' />
+        <referenced-view instances='1' viewId='Sheet 4' />
+      </referenced-views>
+    </_.fcp.VizExtensions.true...referenced-extension>
+  </_.fcp.VizExtensions.true...referenced-extensions>
+</workbook>
