@@ -1,0 +1,8 @@
+{
+    "description": "Collider graph",
+    "graph": {
+        "X": ["W"],
+        "Y": ["W"],
+        "W": []
+    }, "comment": "Collider graph for testing"
+}

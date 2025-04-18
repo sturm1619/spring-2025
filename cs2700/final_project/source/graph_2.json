@@ -1,0 +1,10 @@
+{
+    "description": "Collider graph",
+    "graph": {
+        "X": ["Y"],
+        "Y": [],
+        "W1": ["X", "W3"],
+        "W2": ["Y", "W3"],
+        "W3": []
+    }, "comment": "This is the graph with a collider, no M bias."
+}

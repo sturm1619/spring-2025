@@ -1,0 +1,18 @@
+{
+    "description": "Thoemmes, 2013",
+    "graph": {
+        "X": ["Y"],
+        "Y": ["Z3"],
+        "Z": [],
+        "Z2": [],
+        "Z3": [],
+        "S1": ["S2", "Z"],
+        "S2": ["S3", "Z2"],
+        "S3": ["Y"],
+        "E0": ["X"],
+        "E1": ["S1"],
+        "E2": ["S2", "Y"],
+        "E3": ["S3"],
+        "E4": ["Y"]
+    }, "comment": "Another possible stress test"
+}

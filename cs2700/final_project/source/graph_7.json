@@ -1,0 +1,12 @@
+{
+    "description": "Graph from study",
+    "graph": {
+        "X": ["Y"],
+        "Y": ["S"],
+        "S": [],
+        "A": ["X", "Y", "B", "S"],
+        "B": ["C", "D"],
+        "C": ["Y", "X"],
+        "D": ["Y"]
+    }, "comment": "idk which study, but it's good for testing"
+}

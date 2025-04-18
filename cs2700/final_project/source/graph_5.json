@@ -1,0 +1,9 @@
+{
+    "description": "Instrument graph",
+    "graph": {
+        "X": ["Y", "I"],
+        "Y": [],
+        "I": ["Y"],
+        "Z": ["X", "I"]
+    }, "comment": "Graph with an instrument and a confounder"
+}

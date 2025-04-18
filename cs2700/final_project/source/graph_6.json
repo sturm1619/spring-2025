@@ -1,0 +1,22 @@
+{
+    "description": "Graph with many variables and few paths",
+    "graph": {
+        "X": ["Y"],
+        "Y": [],
+        "C8": ["C7", "Y"],
+        "W9": ["C8"],
+        "W10": ["W9"],
+        "W11": ["W10"],
+        "W12": ["W11"],
+        "W13": ["W12"],
+        "W14": ["W13"],
+        "W15": ["W14", "Y"],
+        "V1": ["X"],
+        "V2": ["V1"],
+        "V3": ["V2"],
+        "V4": ["V3"],
+        "V5": ["V4"],
+        "V6": ["V5"],
+        "C7": ["V6", "X"]
+    }, "comment": "Super big graph"
+}

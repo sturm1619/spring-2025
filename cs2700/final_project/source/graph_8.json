@@ -1,0 +1,17 @@
+{
+    "description": "van Kampen, 2014",
+    "graph": {
+        "X": ["Y", "M1", "C5"],
+        "Y": ["C5"],
+        "M2": ["Y", "C1"],
+        "Z1": ["X", "Y"],
+        "Z2": ["X", "M2", "C1", "C2", "C4"],
+        "Z3": ["Z2", "C3", "C4"],
+        "Z4": ["Z1", "Z2", "Z3", "C3", "C4"],
+        "C1": [],
+        "C2": ["C1"],
+        "C3": ["C2"],
+        "C4": [],
+        "C5": []
+    }, "comment": "Hope this is a good stress test"
+}

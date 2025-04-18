@@ -1,0 +1,12 @@
+{
+    "description": "M bias graph",
+    "graph": {
+        "X": ["Y"],
+        "Y": [],
+        "W1": ["X", "W3"],
+        "W2": ["Y", "W3"],
+        "W3": ["Y", "X"],
+        "Z": ["X"]
+    },
+    "comment": "The classic M bias graph of butterfly graph. I added an instrument for testing purposes, but it's essentially the same"
+}

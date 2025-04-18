@@ -1,0 +1,8 @@
+{
+    "description": "Simple graph",
+    "graph":{
+        "X": ["Y"],
+        "Y": []
+    },
+    "comment": "Just a simple graph X -> Y"
+}
