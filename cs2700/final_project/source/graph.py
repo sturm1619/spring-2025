@@ -152,7 +152,7 @@ class AdjacencyListStrategy(GraphStrategy):
 import numpy as np
 import pandas as pd
 from collections.abc import Generator
-from itertools import permutations#, combinations
+from itertools import permutations, product, combinations
 from functools import cache
 
 class AdjacencyMatrixStrategy(GraphStrategy):
@@ -181,6 +181,17 @@ class AdjacencyMatrixStrategy(GraphStrategy):
             current_matrix @= matrix
 
         return exists_path
+
+    @classmethod
+    def children(cls, matrix: pd.DataFrame):
+        children: dict[str, set[str]] = {
+            variable: set() for variable in cls.variables(matrix)
+        }
+        for source, sink in product(matrix.index, matrix.columns):
+            if matrix.loc[source, sink] == 1:
+                children[source].add(sink)
+
+        return children
 
 
     @classmethod
@@ -246,7 +257,7 @@ class AdjacencyMatrixStrategy(GraphStrategy):
         # return found_paths
 
     @classmethod
-    def confounders(cls, matrix) -> Generator[str]:
+    def confounders(cls, matrix) -> dict[str, list[str]]:
         # from pprint import pprint
         paths: list[list[str]] = list(cls.paths(matrix))
 
@@ -262,7 +273,6 @@ class AdjacencyMatrixStrategy(GraphStrategy):
                 for path in paths if covariate in path
                 and "X" not in path and "Y" in path)
         }
-
         # colliders: set[str] = cls.colliders(matrix)
         mediators: set[str] = set(
             confounder for confounder in confounders 
@@ -270,15 +280,17 @@ class AdjacencyMatrixStrategy(GraphStrategy):
                 for parent in set(confounders) - {confounder}
                 for path in confounders[parent])
         )
+
         del paths
         descendants: dict[str, set[str]] = cls.descendants(matrix)
 
         for confounder, paths in confounders.copy().items():
             if all(
                 any(
-                    mediator in path
-                    for mediator in mediators & descendants[confounder]
-                ) for path in paths if "X" in path
+                    mediator in path 
+                    for mediator in mediators - {confounder}
+                        & descendants[confounder]
+                ) for path in paths #if "X" in path
             ): del confounders[confounder]; continue
 
 
@@ -290,7 +302,7 @@ class AdjacencyMatrixStrategy(GraphStrategy):
             # ):  del confounders[confounder]
 
         # pprint(confounders)
-        # print(confounders)
+        # print("\tMediators:", mediators)
 
         # for mediator in mediators.copy():
         #     if any(
@@ -298,38 +310,130 @@ class AdjacencyMatrixStrategy(GraphStrategy):
         #         descendants[confounder]
         #     )
 
-        return confounders.keys()
+        return confounders
 
-    # @classmethod
-    # def colliders(cls, matrix) -> Generator[str]:
-    #     return (variable for variable in set(matrix.columns) - {"X", "Y"}
-    #         if sum(matrix[variable]) > 1)
+    @classmethod
+    def colliders(cls, matrix) -> Generator[str]:
+        return (variable for variable in set(matrix.columns) - {"X", "Y"}
+            if sum(matrix[variable]) > 1)
+
+    @classmethod
+    def confounding_paths(cls, matrix):
+        confounders: dict[str, list[str]] = cls.confounders(matrix)
+
+        colliders: set[str] = set(cls.colliders(matrix))
+
+        # Colliders
+        confounding_colliders: dict[str, list[str]] = {
+            covariate: confounders[covariate]
+            for covariate in set(confounders) & set(colliders)
+        }
+
+        parent_of_confounding_collider: dict[str, list[str]] = {
+            covariate: confounders[covariate]
+            for collider in confounding_colliders
+            for covariate in matrix.index
+            if matrix.loc[covariate, collider] == 1
+        }
+        print("\tConfounding colliders:", confounding_colliders)
+
+        print("\tParents of Confounding colliders:",
+              parent_of_confounding_collider)
+
+        # Mediators
+
+        return 
+
+    @classmethod
+    def find_minimum_admissible_set(cls, matrix) -> set[str]:
+        confounders: set[str] = set(cls.confounders(matrix))
+        minimum_admissible_sets: set[set[str]] = set(
+            (confounder,) for confounder in confounders
+        )
+        if not minimum_admissible_sets: return minimum_admissible_sets
+
+        colliding_confounders: set[str] = \
+            confounders & set(cls.colliders(matrix))
+
+        for collider in colliding_confounders:
+            for path in cls.paths(matrix):
+                if collider in path:
+                    minimum_admissible_sets.add(
+                        (collider, path[path.index(collider) - 1])
+                    )
+
+        for set_a, set_b in permutations(minimum_admissible_sets, 2):
+            if set_b in minimum_admissible_sets and \
+                set(set_a) >= set(set_b):
+                minimum_admissible_sets.remove(set_b)
+
+        return minimum_admissible_sets
     #
     # @classmethod
-    # def find_minimum_admissible_set(cls, matrix) -> set[str]:
-    #     confounders: set[str] = set(cls.confounders(matrix))
-    #     minimum_admissible_sets: set[set[str]] = set(
-    #         (confounder,) for confounder in confounders
+    # def platt_algorithm(cls, matrix) -> list[set[str]]:
+    #     ancestors: dict[str,set[str]] = cls.ancestors(matrix)
+    #     # descendats: dict[str, set[str]] = cls.descendants(matrix)
+    #     variables: set[str] = {
+    #         covariate for covariate in cls.variables(matrix)
+    #         if covariate not in {"X", "Y"} and
+    #             "X" not in ancestors[covariate] and
+    #             (covariate in ancestors["X"] or
+    #             covariate in ancestors["Y"])
+    #     }
+    #
+    #     undirected_matrix: pd.DataFrame = matrix + matrix.T
+    #
+    #     for source, sink in combinations(matrix.index, 2):
+    #         if not (source in variables | {"Y"}
+    #                 and sink in variables | {"X"}):
+    #             undirected_matrix.loc[source, sink] = 0
+    #             undirected_matrix.loc[sink, source] = 0
+    #
+    #     print(undirected_matrix)
+    #
+    #     collider_matrix: pd.DataFrame = pd.DataFrame(
+    #         np.zeros_like(matrix), index=matrix.index,
+    #         columns= matrix.columns
     #     )
-    #     if not minimum_admissible_sets: return minimum_admissible_sets
     #
-    #     colliding_confounders: set[str] = \
-    #         confounders & set(cls.colliders(matrix))
+    #     children: dict[str, set[str]] = cls.children(matrix)
+    #     for variable_a, variable_b in combinations(variables, 2):
+    #         colliders = children[variable_a] & children[variable_b]
+    #         if colliders - {"X", "Y"}:
+    #             undirected_matrix.loc[variable_a, variable_b] = 1
+    #             undirected_matrix.loc[variable_b, variable_a] = 1
     #
-    #     for collider in colliding_confounders:
-    #         for path in cls.paths(matrix):
-    #             if collider in path:
-    #                 minimum_admissible_sets.add(
-    #                     (collider, path[path.index(collider) - 1])
-    #                 )
-    #
-    #     for set_a, set_b in permutations(minimum_admissible_sets, 2):
-    #         if set_b in minimum_admissible_sets and \
-    #             set(set_a) >= set(set_b):
-    #             minimum_admissible_sets.remove(set_b)
-    #
-    #     return minimum_admissible_sets
-    #
+    #     bias_matrix = undirected_matrix + collider_matrix
+        # print(bias_matrix)
+        # a = bias_matrix.copy()
+        # for _ in range(len(variables)+1):
+        #     print(a)
+        #     a @= bias_matrix
+
+        # admissible_sets = []
+        # for k in range(1, len(variables)+1):
+        #     for combination in combinations(variables, k):
+        #         is_admissible = True
+        #         generation_matrix = bias_matrix.copy()
+        #
+        #         for confounder in combination:
+        #             for child in matrix.columns:
+        #                 generation_matrix.loc[confounder, child] = 0
+        #
+        #         for _ in range(len(matrix.index)):
+        #             if matrix.loc["Y", "X"] == 1:
+        #                 is_admissible = False
+        #                 break
+        #             generation_matrix @= bias_matrix
+        #
+        #         print(generation_matrix)
+        #         if is_admissible: 
+        #             admissible_sets.append(combination)
+        #
+        # print(admissible_sets)
+
+
+
 import json
 from itertools import product
 
@@ -355,8 +459,9 @@ class Graph:
         self.ancestors = self._strategy.ancestors(self._data)
         self.paths = list(self._strategy.paths(self._data))
         self.confounders = set(self._strategy.confounders(self._data))
+        self.colliders = set(self._strategy.colliders(self._data))
 
-        # self.colliders = set(self._strategy.colliders(self._data))
+        self.sets = set(self._strategy.find_minimum_admissible_set(self._data))
 
 
     def __str__(self) -> str:
