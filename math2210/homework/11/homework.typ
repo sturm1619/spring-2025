@@ -10,9 +10,12 @@
 
 #text(size: 24pt, font: "Noto Serif", stroke: navy, fill: navy, "by Carlos Rubio")
 
+// #text(size: 18pt, font: "Noto Serif", stroke: navy, fill: navy, "March 8th, 2025")
 #text(size: 18pt, font: "Noto Serif", stroke: navy, fill: navy, "March 8th, 2025")
 
 #pagebreak()
+
+#set rect(stroke: blue)
 
 // NOTE: Body
 
@@ -237,6 +240,6 @@ $
   &= 1 / 4 integral_0^(6) e^y d y - 3 / 2 \
   &= e^y / 4|_0^(6) - 3 / 2 \
   &= e^6 / 4 - 1 / 4 - 3 / 2 \
-  &= (e^6 - 7) / 4 \
+  &= #rect(stroke: red)[$ (e^6 - 7) / 4 $] \
 $
 

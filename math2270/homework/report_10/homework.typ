@@ -1609,8 +1609,8 @@ $
 $
 
 $
-  A = mat(3/5,0,4/5;0,1,0;4/5,0,-3/5) mat(-50,0,0;0,-3,0;0,0,25)
-  mat(3/5,0,4/5;0,1,0;4/5,0,-3/5)
+  #rect[$ A = mat(3/5,0,4/5;0,1,0;4/5,0,-3/5) mat(-50,0,0;0,-3,0;0,0,25)
+  mat(3/5,0,4/5;0,1,0;4/5,0,-3/5) $]
 $
 
 #line()
@@ -1647,10 +1647,26 @@ $
   t mat(1;1;1)
 $
 
-Therefore,
+Therefore, by Gram-Schmidt process:
 
 $
-  P = mat(-1/sqrt(2), -1/sqrt(2),1/sqrt(3);1/sqrt(2),0,1/sqrt(3))
+  #v _1 = (-1 / sqrt(2),0,1 / sqrt(2)),
+  quad #v _2 = (-1 / sqrt(6),2 / sqrt(6),1 / sqrt(6)),
+  quad #v _3 = (1 / sqrt(3), 1 / sqrt(3), 1 / sqrt(3))
+$
+
+$
+  #rect[$
+  P = mat(
+  -1 / sqrt(2), -1 / sqrt(6), 1/sqrt(3);
+    0, 2 / sqrt(6), 1/sqrt(3);
+    1 / sqrt(2), -1 / sqrt(6), 1/sqrt(3)), quad
+  P^(-1) = mat(
+  -1 / sqrt(2), 0, 1 / sqrt(2);
+    -1 / sqrt(6), 2 / sqrt(6), -1 / sqrt(6);
+    1/sqrt(3), 1/sqrt(3), 1/sqrt(3)), quad
+  Lambda = mat(3,0,0;0,3,0;0,0,0)
+  $]
 $
 
 
@@ -1692,7 +1708,7 @@ $
   = mat(1/2,1/2;1/2, 1/2) \
 $
 
-$ A = 2 mat(1/2, -1/2; -1/2, 1/2) + 4 mat(1/2,1/2;1/2, 1/2) $
+$ A = #rect[$ 2 mat(1/2, -1/2; -1/2, 1/2) + 4 mat(1/2,1/2;1/2, 1/2) $] $
 
 == Exercise 7.2.17
 
@@ -1701,21 +1717,170 @@ $ mat(-3,1,2;1,-3,2;2,2,0) $
 === Answer
 
 $
-  det(A - lambda I)
-  &= (-3 - lambda)[(3 + lambda)(lambda) - 6]
-  + (lambda + 4) + 2(2 + 2lambda +6) \
-  &= (-3 - lambda)(lambda^2 + 3lambda - 6) + (lambda + 4) + 2(2lambda +8)
+  det(lambda I - A)
+  &= -2(2 + 2lambda +6) -2(2 + 2lambda +6) + lambda((lambda+3)^2 - 1) \
+  &= -8(lambda + 4) + lambda(lambda +4)(lambda + 2) \
+  &= (lambda +4)(lambda^2 + 2lambda - 8) \
+  &= (lambda +4)^2(lambda - 2) \
+$
+
+For $lambda = -4$:
+
+$
+  mat(-1,-1,-2;-1,-1,-2;-2,-2,-4)
+  arrow.double.long s mat(-1;0;1) + t mat(-1;1;0)
+$
+
+For $lambda = 2$:
+
+$
+  mat(1,-1/5,-2/5;0,1,1/2;0,0,0)
+  arrow.double.long s mat(3;-5; 10)
+$
+
+Since vectors from different eigenbasis are orthogonal, we only need to
+orthogonalize the eigenbasis corresponding to $lambda = -4$:
+
+$
+  #v _1 &= (-1,0,1) \ \
+  #v _2 &= (-1,1,0) - ((-1,0,1) dot (-1,1,0)) / 2 (-1,0,1) \
+  &= (-1,1,0) + 1 / 2 (-1,0,1) = (-3 / 2, 1, 1 / 2) \ \
+  #v _3 &= (3,-5,10)
+$
+
+which can be normalized into ${(-1/sqrt(2), 0, 1/sqrt(2)),
+(-3/sqrt(14),2/sqrt(14),1/sqrt(14)), (3/sqrt(134),-5/sqrt(134),10/sqrt(134))}$.
+Then
+
+$
+  P = mat(-1/sqrt(2),-3/sqrt(14),3/sqrt(134);0,2/sqrt(14),-5/sqrt(134);
+  1/sqrt(2), 1/sqrt(14), 10/sqrt(134)), quad
+  P^(-1) = mat(-1/sqrt(2),0,1/sqrt(2); -3/sqrt(14),2/sqrt(14),1/sqrt(14);
+  3/sqrt(134), -5/sqrt(134), 10/sqrt(134)), quad
+  Lambda &= mat(-4,0,0;0,-4,0;0,0,2)
+$
+
+Thus
+
+$
+  A = (-4) mat(-1/sqrt(2);0;1/sqrt(2)) mat(-1/sqrt(2),0,1/sqrt(2))
+  -4 mat(-3/sqrt(14); -2/sqrt(14); 1/sqrt(14))
+  mat(-3/sqrt(14), -2/sqrt(14), 1/sqrt(14)) \
+  +2 mat(3/sqrt(134);-5/sqrt(134);10/sqrt(134))
+  mat(3/sqrt(134),-5/sqrt(134),10/sqrt(134)) \
+  = #rect[$ -4 mat(1/2, 0, -1/2;0, 0, 0; -1/2, 0, 1/2)
+  -4 mat(9/14, 6/14, -3/14; 6/14, 2/7, -2/14; -3/14, -2/14, 1/14)
+  + 2 mat(9/ 134, -15/134, 15/67; -15/134, 25/134, -25/67; 15/67, -25/67, 50/67)
+    $]
 $
 
 #pagebreak()
 
 = Section 7.5
 
-==== (6 Exercise)
-== Exercise 7.1.1
-== Exercise 7.1.3
-== Exercise 7.1.9
-== Exercise 7.1.11
-== Exercise 7.1.19
-== Exercise 7.1.23
+==== Hermitian, Unitary and Normal Matrices (6 Exercise)
 
+== Exercise 7.5.1
+
+Find $A^*$.
+
+$ A = mat(2i, 1-i;4, 3+i;5+i,0) $
+
+=== Answer
+
+$ A^* = overline(A)^T = mat(2i, 4,5-i;1+i,3-i,0) $
+
+#line()
+
+== Exercise 7.5.3
+
+Substitute numbers for the $times$'s so that $A$ is Hermitian.
+
+$ A = #rect[$ mat(1,i,2-3i;times,-3,1;times,times,2) $] $
+
+=== Answer
+
+$
+  A = mat(1, i, 2-3i; overline(i), -3, 1; overline(2+3i), overline(1), 2)
+  = #rect[$ mat(1,i,2-3i;-i,-3,1;2-3i,1,2) $]
+$
+
+#line()
+
+For Exercises 9 and 11, show that $A$ is unitary, and find $A^(-1)$.
+
+== Exercise 7.5.9
+
+$ A = mat(3/5,4/5i;-4/5,3/5i) $
+
+=== Answer
+
+$
+  overline(A) &= mat(3/5,-4/5i;-4/5,-3/5i) \
+  A^* &= mat(3/5,-4/5;-4/5i,-3/5i) \
+  A^* A &= mat(3/5,-4/5;-4/5i,-3/5i) mat(3/5,4/5i;-4/5,3/5i) \
+  &= mat(9/25+16/25, -12/25+12/25;-12/25+12/25,16/25+9/25) \
+  &= #rect[$ I $]
+$
+
+#line()
+
+== Exercise 7.5.11
+
+$
+  A = mat(1/(2sqrt(2)) (sqrt(3) + i), 1/(2sqrt(2)) (1 - i sqrt(3));
+  1/(2sqrt(2)) (1+i sqrt(3)), 1/(2sqrt(2)) (i - sqrt(3));
+)
+$
+
+=== Answer
+
+$
+  A &= 1/(2 sqrt(2)) mat(sqrt(3) +i, 1-i sqrt(3); 1 + i sqrt(3), i - sqrt(3)) \
+  overline(A)
+  &= 1/(2 sqrt(2)) mat(sqrt(3)-i, 1 +i sqrt(3); 1 - i sqrt(3), - sqrt(3) - i) \
+  A^*
+  &= 1/(2 sqrt(2)) mat(sqrt(3)-i, 1 - i sqrt(3); 1 +i sqrt(3), - sqrt(3) - i) \
+  A^* A
+  &= 1/(2 sqrt(2)) mat(sqrt(3)-i, 1 - i sqrt(3); 1 +i sqrt(3), - sqrt(3) - i)
+  1/(2 sqrt(2)) mat(sqrt(3) +i, 1-i sqrt(3); 1 + i sqrt(3), i - sqrt(3)) \
+  &= 1/8 mat(8,0; 0,8) \
+  &= #rect[$ I $]
+$
+#line()
+== Exercise 7.5.19
+
+Substitute numbers for the $times$'s so that $A$ is skew-Hermitian.
+
+$ A = mat(0, i, 2-3i; times, 0, 1; times, times, 4i) $
+
+=== Answer
+
+Note that $A^* = - A arrow.double.long -A^* = A$.
+
+$
+  overline(A) &= mat(0,-i,2+3i;times,0,1;times,times,-4i) \
+  A^* &= mat(0, times, times; -i, 0, times; 2 + 3i, 1, -4i) \
+  -A^* &= mat(0, times, times; i, 0, times; -2 - 3i, -1, 4i) \
+  A &= #rect[$ mat(0,i,2-3i;i,0,1;-2-3i,-1,4i) $]
+$
+
+#line()
+
+== Exercise 7.5.23
+
+Verify that the eigenvalues of the skew Hermitian matrix $A$ are pure imaginary
+numbers.
+
+$ A = mat(0,-1+i;1+i, i) $
+
+=== Answer
+
+Remember that $lambda = 0$ is not considered an eigenvalue of a matrix.
+
+$
+  det(A - lambda I) &= lambda^2 - i lambda + 0 - (-1 + i)(1 +i) \
+  &= lambda^2 - i lambda \
+  &= lambda(lambda - i) \
+  lambda &= #rect[$ 0, i $] \
+$
